@@ -15,20 +15,21 @@
 <ul>
   <li>Clone this repository or download the script to your local machine.</li>
   <li>Install the necessary dependencies:</li>
-  <p>!pip install ultralytics
-!pip install deep_sort_realtime
-!pip install opencv-python
+  <p>!pip install ultralytics<br>
+!pip install deep_sort_realtime<br>
+!pip install opencv-python<br>
+                            
 </p>
 </ul>
 <h3>How to run the code</h3>
 <ul>
   <li>Upload the video to Colab or your working environment. Modify the video_path variable in the script to point to your video file.</li>
   <li>Run the process_video() function with the correct path to process the video:</li>
-  <p>video_path = '/content/01.mp4'  # Path to your input video
+  <p>video_path = '/content/01.mp4'  # Path to your input video<br>
 process_video(video_path)</p>
   <li>Output Video: The output video with detected persons and tracking IDs will be saved as output_with_tracking.mp4.</li>
   <li>Download the Output: After processing, you can download the output video using:</li>
-  <p>from google.colab import files
+  <p>from google.colab import files<br>
 files.download('output_with_tracking.mp4')</p>
 </ul>
 <h3>Code Explanation</h3>
@@ -45,7 +46,7 @@ files.download('output_with_tracking.mp4')</p>
 <h4>Video Processing</h4>
 <li>The video is processed frame by frame. YOLO detects persons in each frame, and the DeepSORT tracker assigns unique IDs to track the persons across the frames.</li>
 <li>Bounding boxes are drawn around detected persons, and the person’s unique ID is displayed.</li>
-<p>results = yolo_model(frame)
+<p>results = yolo_model(frame)<br>
 tracks = tracker.update_tracks(detections, frame=frame)
 </p>
 <h4>Output Video</h4>
